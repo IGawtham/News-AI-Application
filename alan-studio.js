@@ -22,7 +22,7 @@ intent('Give me the news from $(source* (.*))', (p) => {
         
         savedArticles = articles;
         
-        p.play({ command: 'newHeadlines', articles });
+        p.play({ command: 'News Headlines', articles });
         p.play(`Here are the (latest|recent) ${p.source.value}.`);
   
         p.play('Would you like me to read the headlines?');
@@ -112,5 +112,5 @@ intent('open (the|) (article|) (number|) $(number* (.*))', (p) => {
 
 intent('(go|) back', (p) => {
     p.play('Sure, going back');
-    p.play({ command: 'newHeadlines', articles: []})
+    p.play({ command: 'News Headlines', articles: []})
 })
